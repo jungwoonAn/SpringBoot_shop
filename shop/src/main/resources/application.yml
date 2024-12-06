@@ -20,6 +20,10 @@ spring:
         format_sql: true  # 쿼리문 가독성 좋게 포맷팅
     database-platform: org.hibernate.dialect.MySQLDialect
 
+  devtools:
+    livereload:
+      enabled: true
+
 logging:
   level:
     org:

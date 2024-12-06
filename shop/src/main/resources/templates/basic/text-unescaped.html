@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>text vs utext</h2>
+
+    <ul>
+        <li>th:text = <span th:text="${data}"></span></li>
+        <li>th:text = <span th:utext="${data}"></span></li>
+    </ul>
+
+    <ul>
+        <li><span>[[...]]</span>[[${data}]]</li>
+        <li><span>[(...)]</span>[(${data})]</li>
+    </ul>
+
+    <ul>
+        <li><span th:inline="none">[[...]] = </span>[[${data}]]</li>
+        <li><span th:inline="none">[(...)] = </span>[(${data})]</li>
+    </ul>
+</body>
+</html>

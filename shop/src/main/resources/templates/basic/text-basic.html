@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>컨텐츠에 데이터 출력하기</h2>
+
+    <ul>
+        <li>th:text 사용2 <span th:text="${data}"></span></li>
+        <!--태그 안에 넣을 때-->
+        <p th:text="${data}"></p>
+        <!--태그 안에 직접 출력할 때-->
+        [[${data}]]
+        <li>컨텐츠 안에서 직접 출력하기2 = [[${data}]]</li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>기본 테이블</h2>
+    <table border="1">
+        <tr>
+            <th>userName</th>
+            <th>age</th>
+        </tr>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.userName}">username</td>
+            <td th:text="${user.age}">0</td>
+        </tr>
+    </table>
+
+    <h2>반복 상태 유지</h2>
+    <table border="1">
+        <tr>
+            <th>count</th>
+            <th>userName</th>
+            <th>age</th>
+            <th>etc</th>
+        </tr>
+        <tr th:each="user, userStat : ${users}">
+            <td th:text="${userStat.count}">username</td>
+            <td th:text="${user.userName}">username</td>
+            <td th:text="${user.age}">0</td>
+            <td>
+                index = <span th:text="${userStat.index}"></span><br>
+                count = <span th:text="${userStat.count}"></span><br>
+                size = <span th:text="${userStat.size}"></span><br>
+                even? = <span th:text="${userStat.even}"></span><br>
+                odd? = <span th:text="${userStat.odd}"></span><br>
+                first? = <span th:text="${userStat.first}"></span><br>
+                last? = <span th:text="${userStat.last}"></span><br>
+                current = <span th:text="${userStat.current}"></span><br>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
