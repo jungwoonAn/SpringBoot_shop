@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-// @Transactional
+@Transactional
 @Log4j2
 class CartTest {
     @Autowired
@@ -35,8 +35,8 @@ class CartTest {
 
     public Member createMember(){
         MemberFormDto memberFormDto = MemberFormDto.builder()
-                .email("test02@test.com")
-                .name("장길산")
+                .email("test05@test.com")
+                .name("신사임당")
                 .address("서울시 마포구 합정동")
                 .password("1234")
                 .build();
@@ -46,7 +46,7 @@ class CartTest {
 
     @Test
     @DisplayName("장바구니 회원 엔티티 매핑 조회 테스트")
-    @Commit  // @Transactional DB에 반영 안되는것 저장되도록해줌
+    //@Commit  // @Transactional DB에 반영 안되는것 저장되도록해줌
     public void findCartAndMemberTest(){
         Member member = createMember();
         memberRepository.save(member);

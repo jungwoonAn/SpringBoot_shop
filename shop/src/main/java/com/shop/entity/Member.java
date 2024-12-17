@@ -9,7 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Entity
 @Table(name="member")
 @Data
-public class Member {
+public class Member extends BaseEntity {
 
     @Id
     @Column(name="member_id")
