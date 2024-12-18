@@ -1,11 +1,12 @@
 package com.shop.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name="cart_item")
-@Data
+@Getter @Setter
 public class CartItem extends BaseEntity {
 
     @Id
