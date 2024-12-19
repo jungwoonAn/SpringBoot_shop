@@ -1,4 +1,4 @@
-package com.ajw.springbootdev;
+package com.ajw.springbootEx;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.ajw.springbootdev;
+package com.ajw.springbootEx;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,8 +16,6 @@ import org.springframework.web.context.WebApplicationContext;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest  // 테스트용 애플리케이션 컨텍스트 생성
 @AutoConfigureMockMvc  // MockMvc 생성

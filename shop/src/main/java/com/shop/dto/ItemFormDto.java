@@ -43,6 +43,10 @@ public class ItemFormDto {
         return modelMapper.map(this, Item.class);
     }
 
+    public Item updateItem(ItemFormDto itemFormDto){
+        return modelMapper.map(itemFormDto, Item.class);
+    }
+
     // Item -> ItemFormDto
     public static ItemFormDto of(Item item){
         return modelMapper.map(item, ItemFormDto.class);

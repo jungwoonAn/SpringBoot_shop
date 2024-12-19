@@ -1,4 +1,4 @@
-package com.ajw.springbootdev;
+package com.ajw.springbootEx;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

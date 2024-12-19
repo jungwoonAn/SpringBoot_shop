@@ -1,4 +1,4 @@
-package com.ajw.springbootdev;
+package com.ajw.springbootEx;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
