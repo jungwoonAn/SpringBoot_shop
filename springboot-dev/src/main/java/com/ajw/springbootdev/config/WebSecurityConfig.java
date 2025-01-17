@@ -50,12 +50,21 @@ public class WebSecurityConfig {
                 .build();
     }
 
-    // 인증 관리자 빈 등록
+    // AuthenticationManager(인증 관리자)를 Bean으로 등록
     @Bean
     public AuthenticationManager authenticationManager(
             AuthenticationConfiguration authenticationConfiguration) throws Exception {
         return authenticationConfiguration.getAuthenticationManager();
     }
+
+    // DaoAuthenticationProvider를 Bean으로 명시적 등록
+//    @Bean
+//    public DaoAuthenticationProvider daoAuthenticationProvider(BCryptPasswordEncoder passwordEncoder, UserDetailService userDetailsService) {
+//        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+//        provider.setPasswordEncoder(passwordEncoder);
+//        provider.setUserDetailsService(userDetailsService);
+//        return provider;
+//    }
 
     // 패스워드 인코더로 사용할 빈 등록
     @Bean
